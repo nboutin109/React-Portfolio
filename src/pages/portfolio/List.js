@@ -6,15 +6,15 @@ import proj3 from "./images/Capture30.png";
 import proj4 from "./images/Capture4.PNG";
 import proj5 from "./images/Capture18.PNG";
 import proj6 from "./images/Capturex.PNG";
-import Wrapper from "../../props/Wrapper/index"
+import Wrapper from "../../support/Wrapper/index"
 
 function portfolio() {
   return (
     <div>
-      <Container style={{ textAlign: 'left'}}>
+      <Container>
         <Col xs="auto">
           <Row>
-          <h1 style={{ paddingTop: '1rem'}}>Samples from github</h1>
+          <h1 style={{ paddingTop: '1rem', paddingLeft: '1rem'}}>Samples from github</h1>
           </Row>
           <Row>
             <Wrapper>
