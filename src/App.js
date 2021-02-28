@@ -12,10 +12,10 @@ function App() {
       <div>
         <NavTabs />
         <Wrapper>
-        <Route exact path="/" component={About} />
         <Route exact path="/about" component={About} />
         <Route exact path="/portfolio" component={List} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="*" component={About} />
         </Wrapper>
       </div>
     </Router>
