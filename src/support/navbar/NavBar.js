@@ -10,22 +10,22 @@ function NavTabs() {
       <li className = "nav-item" style={{paddingRight:'1rem'}}><h3 >Nicholas Boutin
       </h3></li>
       <li className="nav-item">
-        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+        <Link to="/Nicholas-Boutin-Coding-Portfolio/" className={location.pathname === "/Nicholas-Boutin-Coding-Portfolio/" ? "nav-link active" : "nav-link"}>
           About me
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/portfolio"
-          className={location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
+          to="/Nicholas-Boutin-Coding-Portfolio/portfolio"
+          className={location.pathname === "/Nicholas-Boutin-Coding-Portfolio/portfolio" ? "nav-link active" : "nav-link"}
         >
           Portfolio
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/contact"
-          className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}
+          to="/Nicholas-Boutin-Coding-Portfolio/contact"
+          className={location.pathname === "/Nicholas-Boutin-Coding-Portfolio/contact" ? "nav-link active" : "nav-link"}
         >
           Contact
         </Link>

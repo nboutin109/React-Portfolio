@@ -3,6 +3,7 @@ import { Form, Button, Container, Col } from 'react-bootstrap';
 import * as emailjs from 'emailjs-com';
 import $ from "jquery";
 
+
 class ContactForm extends Component {
   state = {
     name: '',
