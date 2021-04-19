@@ -1,0 +1,95 @@
+.bodyClass{
+    z-index: 10;
+    align-items:center;
+    justify-content: center;
+    display: flexbox;
+    font-family: "Open Sans";
+}
+
+.glass{
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(50px);
+    padding: 1rem 1rem;
+}
+
+#animate1 {
+    background: linear-gradient(45deg, #4ca1e2 0%, #274fc7 49%, #420dac 82%);
+    animation: aurora 10s ease infinite;
+    display: block;
+    height: auto;
+    width: auto;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: 200%;
+    -moz-background-size: cover;
+    background-position: center center;
+}
+
+#animate2 {
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    animation: aurora 10s ease infinite;
+    display: block;
+    height: auto;
+    width: auto;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: 200%;
+    -moz-background-size: cover;
+    background-position: center center;
+}
+
+@keyframes aurora {
+    0% {
+        background-position: left top;
+    }
+    25% {
+        background-position: right top;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+.imgEdit{
+    padding-top: '1rem'; 
+    width: '285px'; 
+    height: '200px';
+}
+.zoom {
+    transition: transform .2s; 
+}
+  
+.zoom:hover {
+    transform: scale(1.4);
+    z-index: 1
+}
+
+.cardEdit{
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    width: 18rem;
+    height: 100%;
+}
+
+.btn1{
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2), 0px 0px 30px rgba(0,0,0,0.2)
+}
+
+.btn2{
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2), 0px 0px 30px rgba(0,0,0,0.2);
+    float: right;
+}

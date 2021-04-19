@@ -3,14 +3,12 @@ import { Form, Button, Container, Col } from 'react-bootstrap';
 import * as emailjs from 'emailjs-com';
 import $ from "jquery";
 
-
 class ContactForm extends Component {
   state = {
     name: '',
     company: '',
     email: '',
     message: '',
-    errors: []
   }
   handleSubmit(e) {
     e.preventDefault()
@@ -31,9 +29,9 @@ class ContactForm extends Component {
     })
       .catch(err => console.log(err))
     this.resetForm();
-    $('#thanks').html("Thanks! I'll get back to you soon!");
-    setTimeout(function() {
-      $("#thanks").fadeOut().empty();
+    $('#thanks').removeClass("invisible");
+    setTimeout(function () {
+      $("#thanks").addClass("invisible");
     }, 5000);
   }
   resetForm() {
@@ -47,14 +45,13 @@ class ContactForm extends Component {
   handleChange = (param, e) => {
     this.setState({ [param]: e.target.value })
   }
-
   render() {
     return (
       <div>
         <Container style={{ textAlign: 'left' }}>
           <Col xs="auto">
-            <h4 style={{ paddingTop: '1rem', fontWeight: 'bold'}}>Thanks again for taking a peek at my portfolio!</h4>
-            <h4 style={{fontWeight: 'bold'}}>If you would like to contact me about any opportunities, please use the form below.</h4>
+            <h4 style={{ paddingTop: '1rem', fontWeight: 'bold' }}>Thanks for taking a peek at my portfolio!</h4>
+            <h4 style={{ fontWeight: 'bold' }}>If you would like to contact me about any opportunities, please use the form below.</h4>
             <Form onSubmit={this.handleSubmit.bind(this)}>
               <Form.Group controlId="name">
                 <Form.Label>Please enter your name</Form.Label>
@@ -72,13 +69,12 @@ class ContactForm extends Component {
                 <Form.Label>Please input your message here:</Form.Label>
                 <Form.Control as="textarea" row={5} name='message' placeholder="Your message here" size="lg" style={{ maxWidth: '50rem' }} value={this.state.message} onChange={this.handleChange.bind(this, 'message')} />
               </Form.Group>
-              <Button variant="primary" type="submit" id="submit">
+              <Button variant="primary" type="submit" id="submit" style={{ backgroundColor: 'green', marginBottom: '1rem' }}>
                 Send
               </Button>
-              <div className="text-danger" id="thanks"></div>
             </Form>
+            <div role='alert' id='thanks' className={"alert alert-success invisible"} style={{maxWidth: '50rem'}}>Thanks! I'll get back to you soon!</div>
           </Col>
-          <Col xs="auto"></Col>
         </Container>
       </div>
     );
